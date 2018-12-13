@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Pump Details"
+        android:textColor="#9c47ff"
+        android:textSize="32sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pump Label"
+        android:textColor="#9c47ff"
+        android:textSize="22sp"/>
+    <EditText
+        android:id="@+id/edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        style="@style/AlertDialog.AppCompat">
+        <requestFocus/>
+    </EditText>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <TextView
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pump Phone No."
+        android:textColor="#9c47ff"/>
+    <EditText
+        android:id="@+id/edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        style="@style/AlertDialog.AppCompat">
+    </EditText>
+    <Button
+        android:id="@+id/edit_btn"
+        android:onClick="edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Edit Pump"/>
+</LinearLayout>
