@@ -69,7 +69,7 @@ public class DatabaseHelper  extends SQLiteOpenHelper{
     }
 
     public List<Pump> getAllPumps() {
-        List<Pump> blogs = new ArrayList<>();
+        List<Pump> pumps = new ArrayList<>();
 
         // Select All Query
         String selectQuery = "SELECT  * FROM " + Pump.TABLE_NAME ;
@@ -85,13 +85,13 @@ public class DatabaseHelper  extends SQLiteOpenHelper{
                         cursor.getString(cursor.getColumnIndex(Pump.COLUMN_LABEL)),
                         cursor.getString(cursor.getColumnIndex(Pump.COLUMN_PHONENUMBER)));
 
-                blogs.add(pump);
+                pumps.add(pump);
             } while (cursor.moveToNext());
         }
 
         db.close();
         cursor.close();
-        return blogs;
+        return pumps;
     }
 
     public int updatePump(Pump b) {
