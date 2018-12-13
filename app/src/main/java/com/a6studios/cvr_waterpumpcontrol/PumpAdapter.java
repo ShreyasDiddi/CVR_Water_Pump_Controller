@@ -16,20 +16,20 @@ import com.a6studios.cvr_waterpumpcontrol.database.Pump;
 
 import java.util.List;
 
-public class PumpAdapter extends RecyclerView.Adapter<PumpAdapter.BlogViewHolder> {
+public class PumpAdapter extends RecyclerView.Adapter<PumpAdapter.PumpViewHolder> {
 
     private Context context;
     List<Pump> pumpsList;
     private DatabaseHelper db;
     MainActivity a;
 
-    public class BlogViewHolder extends RecyclerView.ViewHolder {
+    public class PumpViewHolder extends RecyclerView.ViewHolder {
         public TextView title;
         public TextView content;
         public ImageButton delete;
         public ImageButton edit;
 
-        public BlogViewHolder(View view) {
+        public PumpViewHolder(View view) {
             super(view);
             title = view.findViewById(R.id.title);
             content = view.findViewById(R.id.content);
@@ -46,15 +46,15 @@ public class PumpAdapter extends RecyclerView.Adapter<PumpAdapter.BlogViewHolder
     }
 
     @Override
-    public BlogViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public PumpViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.pump_item, parent, false);
 
-        return new BlogViewHolder(itemView);
+        return new PumpViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(BlogViewHolder holder, final int position) {
+    public void onBindViewHolder(PumpViewHolder holder, final int position) {
         Pump pumps = pumpsList.get(position);
 
         holder.title.setText(pumps.getLabel());
