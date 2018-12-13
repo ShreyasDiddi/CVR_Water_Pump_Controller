@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             pumps = db.getAllPumps();
         }
 
-        recyclerView = findViewById(R.id.rvBlogs);
+        recyclerView = findViewById(R.id.rvPumps);
         mAdapter = new PumpAdapter(this,a, pumps,db);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
